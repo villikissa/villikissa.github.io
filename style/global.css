@@ -89,13 +89,12 @@ footer {
     --bouton_centre: url("./assets/bouton_c_v_2.svg");
 }
 
-.bouton:hover{
+.bouton:hover {
     filter: grayscale(0.2);
     cursor: pointer;
     --bouton_gauche: url("./assets/bouton_g_v_3.svg");
     --bouton_droite: url("./assets/bouton_d_v_3.svg");
-    --bouton_centre: url("./assets/bouton_c_v_3.svg");
-    color: var(--color_v_3)
+    --bouton_centre: url("./assets/bouton_c_v_3.svg")
 }
 
 .bouton_gauche, .bouton_droit {
@@ -132,3 +131,22 @@ footer {
     justify-content: center;
 }
 
+@keyframes moveImage {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(2%) translateY(2%);
+    }
+    100% {
+        transform: translateX(0);
+      }
+}
+.move {
+    animation: moveImage 3s linear infinite;
+    height: 200px; /* Réglez la hauteur de l'image selon vos besoins */
+}
+
+.move:hover {
+    animation: moveImage 0.2s linear infinite;
+}
