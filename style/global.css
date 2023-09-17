@@ -24,6 +24,11 @@
 
 h1{
     font-family: 'Briyone';
+    text-shadow: 
+    -20px -20px 20px var(--color_b),
+    -20px 20px 20px var(--color_b),
+    20px -20px 20px var(--color_b),
+    20px 20px 20px var(--color_b);
 }
 
 p {
@@ -59,11 +64,11 @@ header img {
     height: 70vh; /* Ajustez la hauteur selon vos besoins */
 }
 
-.contenant {
+/* .contenant {
     background-color: var(--color_b);
     padding: 20px;
     border-radius: 500px;
-}
+} */
 
 /* Styles pour le copyright */
 footer {
@@ -98,6 +103,9 @@ footer {
 }
 
 .button {
+    /*Only for this website*/
+    margin-top: 20px;
+    /*FIN*/
     background: 
         url(./assets/bouton_g_v_2.svg) left center no-repeat, 
         url(./assets/bouton_d_v_2.svg) right center no-repeat,
