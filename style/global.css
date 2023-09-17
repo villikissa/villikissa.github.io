@@ -92,9 +92,9 @@ footer {
 .bouton:hover{
     filter: grayscale(0.2);
     cursor: pointer;
-    --bouton_gauche: url("./assets/bouton_g_v_1.svg");
-    --bouton_droite: url("./assets/bouton_d_v_1.svg");
-    --bouton_centre: url("./assets/bouton_c_v_1.svg");
+    --bouton_gauche: url("./assets/bouton_g_v_3.svg");
+    --bouton_droite: url("./assets/bouton_d_v_3.svg");
+    --bouton_centre: url("./assets/bouton_c_v_3.svg");
     color: var(--color_v_3)
 }
 
