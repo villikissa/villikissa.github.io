@@ -77,60 +77,6 @@ footer {
     background-color: var(--color_b);
 }
 
-.bouton {
-    display: flex;
-    background-color: transparent; /* Fond transparent du bouton */
-    border: none; /* Supprimer la bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 0; /* Aucun espacement interne */
-    box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur totale */
-    --bouton_gauche: url("./assets/bouton_g_v_2.svg");
-    --bouton_droite: url("./assets/bouton_d_v_2.svg");
-    --bouton_centre: url("./assets/bouton_c_v_2.svg");
-}
-
-.bouton:hover {
-    filter: grayscale(0.2);
-    cursor: pointer;
-    --bouton_gauche: url("./assets/bouton_g_v_3.svg");
-    --bouton_droite: url("./assets/bouton_d_v_3.svg");
-    --bouton_centre: url("./assets/bouton_c_v_3.svg")
-}
-
-.bouton_gauche, .bouton_droit {
-    width: 200px; /* Largeur du coin gauche et droit */
-    height: 100px; /* Hauteur du coin gauche et droit */
-    background-size: contain; /* Ajuste la taille de l'image pour s'adapter */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
-}
-
-.bouton_gauche {
-    background-image: var(--bouton_gauche);
-    background-position: right center;
-    margin-right: -1px;
-}
-
-.bouton_droit {
-    background-image: var(--bouton_droite);
-    background-position: left center;
-    margin-left: -1px;
-}
-
-.bouton_centre {
-    background-image: var(--bouton_centre);
-    flex: 1; /* Remplit l'espace restant dans le bouton */
-    text-align: center; /* Centre le texte horizontalement */
-    color: var(--color_w); /* Couleur du texte */
-    font-weight: bold; /* Style du texte */
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @keyframes moveImage {
     0% {
       transform: translateX(0);
@@ -149,4 +95,33 @@ footer {
 
 .move:hover {
     animation: moveImage 0.2s linear infinite;
+}
+
+.button {
+    background: 
+        url(./assets/bouton_g_v_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_v_2.svg) right center no-repeat,
+        url(./assets/bouton_c_v_2.svg) center center
+    ;
+    background-size: auto, auto, auto;
+    min-width: fit-content;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    padding: 20px;
+    font-family: 'Briyone';
+    font-size: larger;
+}
+
+.button:hover {
+    background: 
+        url(./assets/bouton_g_v_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_v_1.svg) right center no-repeat,
+        url(./assets/bouton_c_v_1.svg) center center
+    ;
+    cursor: pointer;
+    color: var(--color_v_3)
 }
