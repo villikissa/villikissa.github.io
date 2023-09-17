@@ -17,6 +17,9 @@
     --color_g: #7BE0AD;
     --color_r: #F76F8E;
     --color_y: #F6AE2D;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 h1{
@@ -30,10 +33,6 @@ p {
 body {
     background-color: #2B2D42;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ccircle fill='%236161C1' cx='45' cy='45' r='10'/%3E%3Cg fill='%236161C1' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='10'/%3E%3Ccircle cx='90' cy='90' r='10'/%3E%3Ccircle cx='90' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-.button_global {
-    
 }
 
 /* Styles pour le header */
