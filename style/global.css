@@ -1,3 +1,7 @@
+/* ------------------------------ */
+/* --- IMPORTATION ET FIX CSS --- */
+/* ------------------------------ */
+
 @font-face{
     font-family: 'Briyone';
     src: url('./fonts/Briyone.woff') format('woff');
@@ -8,6 +12,7 @@
     color: white;
     margin: 0;
     padding: 0;
+    background: transparent;
     box-sizing: border-box;
     --color_w: #FCFDFD;
     --color_v_1: #CCCCFF;
@@ -17,92 +22,18 @@
     --color_g: #7BE0AD;
     --color_r: #F76F8E;
     --color_y: #F6AE2D;
+    --background_black: url(./assets/bf_svg_point_fix_b.svg);
+    --background_white: url(./assets/bf_svg_point_fix_w.svg);
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
 
-h1{
-    font-family: 'Briyone';
-}
-
-p {
-    font-family: 'Trebuchet MS', sans-serif; 
-}
-
-body {
-    width: 100vw;
-    background-color: #2B2D42;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ccircle fill='%236161C1' cx='45' cy='45' r='10'/%3E%3Cg fill='%236161C1' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='10'/%3E%3Ccircle cx='90' cy='90' r='10'/%3E%3Ccircle cx='90' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* Styles pour le header */
-header {
-    height: 60px;
-    padding: 20px;
-    text-align: center;
-}
-
-header img {
-    max-width: 100px;
-    height: auto;
-}
-
-/* Styles pour le contenu */
-.contenu {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70vh; /* Ajustez la hauteur selon vos besoins */
-}
-
-.contenant {
-    background-color: var(--color_b);
-    padding: 20px;
-    border-radius: 500px;
-}
-
-/* Styles pour le copyright */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    top: 90%; /* Move the top of the container to the vertical center */
-    left: 50%; /* Move the left of the container to the horizontal center */
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    background-color: var(--color_b);
-}
-
-@keyframes moveImage {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(2%) translateY(2%);
-    }
-    100% {
-        transform: translateX(0);
-      }
-}
-.move {
-    animation: moveImage 3s linear infinite;
-    height: 200px; /* Réglez la hauteur de l'image selon vos besoins */
-}
-
-.move:hover {
-    animation: moveImage 0.2s linear infinite;
-}
+/* ------------------------------- */
+/* --- DEBUT DE LA ZONE BOUTON --- */
+/* ------------------------------- */
 
 .button {
-    background: 
-        url(./assets/bouton_g_v_2.svg) left center no-repeat, 
-        url(./assets/bouton_d_v_2.svg) right center no-repeat,
-        url(./assets/bouton_c_v_2.svg) center center
-    ;
     background-size: auto, auto, auto;
     min-width: fit-content;
     max-width: max-content;
@@ -117,11 +48,232 @@ footer {
 }
 
 .button:hover {
+    cursor: pointer;
+}
+
+.button_violet_1 {
+    background: 
+    url(./assets/bouton_g_v_1.svg) left center no-repeat, 
+    url(./assets/bouton_d_v_1.svg) right center no-repeat,
+    url(./assets/bouton_c_v_1.svg) center center
+    ;
+    color: var(--color_v_3)
+}
+
+.button_violet_1:hover {
+    background: 
+        url(./assets/bouton_g_v_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_v_2.svg) right center no-repeat,
+        url(./assets/bouton_c_v_2.svg) center center
+    ;
+    color: var(--color_w)
+}
+
+.button_violet_2 {
+    background: 
+    url(./assets/bouton_g_v_2.svg) left center no-repeat, 
+    url(./assets/bouton_d_v_2.svg) right center no-repeat,
+    url(./assets/bouton_c_v_2.svg) center center
+    ;
+}
+
+.button_violet_2:hover {
     background: 
         url(./assets/bouton_g_v_1.svg) left center no-repeat, 
         url(./assets/bouton_d_v_1.svg) right center no-repeat,
         url(./assets/bouton_c_v_1.svg) center center
     ;
-    cursor: pointer;
     color: var(--color_v_3)
 }
+
+.button_violet_3 {
+    background: 
+    url(./assets/bouton_g_v_3.svg) left center no-repeat, 
+    url(./assets/bouton_d_v_3.svg) right center no-repeat,
+    url(./assets/bouton_c_v_3.svg) center center
+    ;
+}
+
+.button_violet_3:hover {
+    background: 
+        url(./assets/bouton_g_v_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_v_2.svg) right center no-repeat,
+        url(./assets/bouton_c_v_2.svg) center center
+    ;
+    color: var(--color_w)
+}
+
+.button_vert {
+    background: 
+        url(./assets/bouton_g_vert_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_vert_1.svg) right center no-repeat,
+        url(./assets/bouton_c_vert_1.svg) center center
+    ;
+    color: var(--color_g)
+}
+
+.button_vert:hover {
+    background: 
+        url(./assets/bouton_g_vert_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_vert_2.svg) right center no-repeat,
+        url(./assets/bouton_c_vert_2.svg) center center
+    ;
+    color: var(--color_w)
+}
+
+.button_rouge {
+    background: 
+        url(./assets/bouton_g_rouge_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_rouge_1.svg) right center no-repeat,
+        url(./assets/bouton_c_rouge_1.svg) center center
+    ;
+    color: var(--color_r)
+}
+
+.button_rouge:hover {
+    background: 
+        url(./assets/bouton_g_rouge_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_rouge_2.svg) right center no-repeat,
+        url(./assets/bouton_c_rouge_2.svg) center center    
+    ;
+    color: var(--color_w)
+}
+
+.button_jaune {
+    background: 
+        url(./assets/bouton_g_jaune_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_jaune_1.svg) right center no-repeat,
+        url(./assets/bouton_c_jaune_1.svg) center center
+    ;
+    color: var(--color_y)
+}
+
+.button_jaune:hover {
+    background: 
+        url(./assets/bouton_g_jaune_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_jaune_2.svg) right center no-repeat,
+        url(./assets/bouton_c_jaune_2.svg) center center
+    ;
+    color: var(--color_w)
+}
+
+.button_reverse_vert:hover {
+    background: 
+        url(./assets/bouton_g_vert_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_vert_1.svg) right center no-repeat,
+        url(./assets/bouton_c_vert_1.svg) center center
+    ;
+    color: var(--color_g)
+}
+
+.button_reverse_vert {
+    background: 
+        url(./assets/bouton_g_vert_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_vert_2.svg) right center no-repeat,
+        url(./assets/bouton_c_vert_2.svg) center center
+    ;
+    color: var(--color_w)
+}
+
+.button_reverse_rouge:hover {
+    background: 
+        url(./assets/bouton_g_rouge_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_rouge_1.svg) right center no-repeat,
+        url(./assets/bouton_c_rouge_1.svg) center center
+    ;
+    color: var(--color_r)
+}
+
+.button_reverse_rouge {
+    background: 
+        url(./assets/bouton_g_rouge_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_rouge_2.svg) right center no-repeat,
+        url(./assets/bouton_c_rouge_2.svg) center center    
+    ;
+    color: var(--color_w)
+}
+
+.button_reverse_jaune:hover {
+    background: 
+        url(./assets/bouton_g_jaune_1.svg) left center no-repeat, 
+        url(./assets/bouton_d_jaune_1.svg) right center no-repeat,
+        url(./assets/bouton_c_jaune_1.svg) center center
+    ;
+    color: var(--color_y)
+}
+
+.button_reverse_jaune {
+    background: 
+        url(./assets/bouton_g_jaune_2.svg) left center no-repeat, 
+        url(./assets/bouton_d_jaune_2.svg) right center no-repeat,
+        url(./assets/bouton_c_jaune_2.svg) center center
+    ;
+    color: var(--color_w)
+}
+
+.button_social {
+    background-color: var(--color_v_2);
+    width: 42px;
+    height: 42px;
+    transition: 0.3s;
+}
+
+.button_social:hover {
+    cursor: pointer;
+}
+
+.github {
+    background: url(./assets/github.svg) no-repeat center center;
+}
+
+.github:hover {
+    background: url(./assets/github_hover.svg) no-repeat center center;
+}
+
+.telegram {
+    background: url(./assets/telegram.svg) no-repeat center center;
+}
+
+.telegram:hover {
+    background: url(./assets/telegram_hover.svg) no-repeat center center;
+}
+
+.linkedin {
+    background: url(./assets/linkedin.svg) no-repeat center center;
+}
+
+.linkedin:hover {
+    background: url(./assets/linkedin_hover.svg) no-repeat center center;
+}
+
+.courriel {
+    background: url(./assets/courriel.svg) no-repeat center center;
+}
+
+.courriel:hover {
+    background: url(./assets/courriel_hover.svg) no-repeat center center;
+}
+
+/* ----------------------------------- */
+/* --- CONSTRUCTION DE LA HOMEPAGE --- */
+/* ----------------------------------- */
+
+body {
+    width: 100%;
+    background-color: #2B2D42;
+    background-image: var(--background_black);
+    background-size: 8vw;
+    display: block;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 100vh;
+    border-bottom: 1px var(--color_v_1) solid;
+    scroll-snap-align: center;
+}
+
+.debug {
+    background-color: red;
+}
+
