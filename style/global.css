@@ -8,7 +8,7 @@
 }
 
 * {
-    font-family: 'Trebuchet MS', sans-serif; 
+    font-family: 'Trebuchet MS', sans-serif;
     color: white;
     margin: 0;
     padding: 0;
@@ -262,14 +262,13 @@ body {
     width: 100%;
     background-color: #2B2D42;
     background-image: var(--background_black);
-    background-size: 8vw;
+    background-size: 5vh;
     display: block;
     scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 section {
-    height: 100vh;
-    border-bottom: 1px var(--color_v_1) solid;
     scroll-snap-align: center;
 }
 
@@ -277,3 +276,249 @@ section {
     background-color: red;
 }
 
+h1 {
+    font-family: Briyone;
+    font-size: xx-large;
+}
+
+p {
+    font-family: 'Trebuchet MS';
+    font-size: large;
+    font-weight:100;
+}
+
+a {
+    text-decoration: none
+}
+/* ----------------------------------- */
+/* ---         SOCIALS             --- */
+/* ----------------------------------- */
+
+.hidden { display: none !important; }
+.flex { display: flex !important; }
+
+.socials {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    gap: 5px;
+    z-index: 200;
+}
+
+.button_social_burger {
+    display: flex;
+    background-image: url("./assets/bouton_burger_v_2.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 42px;
+}
+
+.button_social_burger:hover{
+    background-image: url("./assets/bouton_burger_v_3.svg");
+    cursor: pointer;
+}
+
+.button_social_list{
+    display: none;
+    flex-direction: row-reverse;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    gap: 5px;
+}
+
+.button_social_cross {
+    background-image: url("./assets/bouton_cross_v.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 42px;
+}
+
+.button_social_cross:hover{
+    background-image: url("./assets/bouton_cross_r.svg");
+    cursor: pointer;
+}
+
+.button_social_list > .button {
+    padding: 9.5px
+}
+
+
+/* ----------------------------------- */
+/* ---         SECTION 1           --- */
+/* ----------------------------------- */
+
+#section_1 {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    height: 85vh; /* Assure-toi que la section prend toute la hauteur de la fenêtre */
+    background-color: var(--color_b) !important;
+    flex-direction: column; /* Empile les éléments verticalement */
+}
+
+#section_1, h1{
+    padding-bottom: 5px;
+}
+  
+.hero {
+    display: flex;
+    align-items: center; /* Alignement vertical au centre */
+    justify-content: center; /* Alignement horizontal au centre */
+    width: 80%; /* Ou la largeur que tu préfères */
+    max-width: 800px; /* Ou la largeur maximale que tu préfères */
+    gap: 20px;
+    
+}
+  
+.image {
+    min-height: 150px;
+    min-width: 150px;
+    flex: 1; /* Permet à l'image de prendre 1/2 de l'espace disponible */
+    background: url('./assets/avatar.svg') no-repeat center center; /* Remplace par le chemin de ton image */
+    background-size: contain; /* Couvre la zone de div */
+}
+
+.button_hero {
+    display: flex;
+    text-align: center; /* Centre le bouton horizontalement */
+    align-items: center; /* Alignement vertical au centre */
+    justify-content: center; /* Alignement horizontal au centre */
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus du bouton */
+    gap: 20px;
+}
+
+#continue {
+    position: absolute;
+    bottom: 20px;
+    background-image: url("./assets/scroll_aura.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+}
+
+/* ----------------------------------- */
+/* ---         Transit 1           --- */
+/* ----------------------------------- */
+
+.transit1 {
+    position: absolute;
+    width: 100%;
+    height: 4vh;
+    background-image: url("./assets/sep_t_w_1.svg");
+    background-repeat: repeat-x;
+    background-size: 5.2vh;
+    animation: transit 60s linear infinite;
+    z-index: 100;
+}
+
+@keyframes transit{
+    from {
+        background-position: 0 0;
+      }
+      to {
+        background-position:0 0;
+      }
+}
+
+/* ----------------------------------- */
+/* ---         SECTION 2           --- */
+/* ----------------------------------- */
+
+#section_2 {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-image: var(--background_white);
+    background-size: 5vh;
+}
+
+.toolbox {
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/skills/ALL.svg");
+    background-repeat: repeat;
+    background-size: 1000px;
+    animation: toolbox 200s linear infinite;
+}
+
+@keyframes toolbox {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 8000%;
+    }
+}
+
+
+
+/* ----------------------------------- */
+/* ---         Transit 2           --- */
+/* ----------------------------------- */
+
+.transit2 {
+    top:-1.9vh;
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    background-image: url("./assets/sep_b_b.svg");
+    background-repeat: repeat-x;
+    background-size: 5.2vh;
+    animation: transit 60s linear infinite;
+    z-index: 100;
+}
+
+/* ----------------------------------- */
+/* ---         SECTION 3           --- */
+/* ----------------------------------- */
+
+#section_3 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bento-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+}
+
+.bento-item {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Styles spécifiques pour chaque catégorie */
+.skills { /* Styles spécifiques pour Compétences */ }
+.experience { /* Styles spécifiques pour Expérience */ }
+.education { /* Styles spécifiques pour Éducation */ }
+.interests { /* Styles spécifiques pour Intérêts */ }
+
+@media (max-width: 600px) {
+    .bento-box {
+        grid-template-columns: 1fr;
+    }
+}
