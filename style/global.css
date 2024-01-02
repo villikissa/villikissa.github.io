@@ -357,7 +357,7 @@ a {
     display: flex;
     align-items: center; /* Centre verticalement */
     justify-content: center; /* Centre horizontalement */
-    height: 85vh; /* Assure-toi que la section prend toute la hauteur de la fenêtre */
+    height: 91vh; /* Assure-toi que la section prend toute la hauteur de la fenêtre */
     background-color: var(--color_b) !important;
     flex-direction: column; /* Empile les éléments verticalement */
 }
@@ -411,10 +411,9 @@ a {
 .transit1 {
     position: absolute;
     width: 100%;
-    height: 4vh;
     background-image: url("./assets/sep_t_w_1.svg");
     background-repeat: repeat-x;
-    background-size: 5.2vh;
+    background-size: ;
     animation: transit 60s linear infinite;
     z-index: 100;
 }
@@ -424,7 +423,7 @@ a {
         background-position: 0 0;
       }
       to {
-        background-position:0 0;
+        background-position:100vh 0;
       }
 }
 
@@ -465,13 +464,12 @@ a {
 /* ----------------------------------- */
 
 .transit2 {
-    top:-1.9vh;
+    background-color: #2B2D42;
     position: relative;
     width: 100%;
-    height: 4vh;
-    background-image: url("./assets/sep_b_b.svg");
+    height: 2.7vh;
+    background-image: url("./assets/sep_b_v2.svg");
     background-repeat: repeat-x;
-    background-size: 5.2vh;
     animation: transit 60s linear infinite;
     z-index: 100;
 }
@@ -480,45 +478,384 @@ a {
 /* ---         SECTION 3           --- */
 /* ----------------------------------- */
 
-#section_3 {
-    width: 100%;
-    height: 50vh;
+.section_3 {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 6.5vh;
+    background: var(--color_v_3);
 }
 
-.bento-box {
+.bento {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    width: 90%;
-    height: 80%;
-    padding: 10px;
+    gap: 2vh;
+    grid-template-columns: repeat(7, 15vh); 
+    grid-template-rows: repeat(5, 15vh); 
+    grid-template-areas: 
+        "a a a b b c d"
+        "a a a b b c e"
+        "f f g g h h i"
+        "j j g g h h i"
+        "k k k k k k k";
 }
 
-.bento-item {
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
+.bento div {
+    border-radius: 20px; 
+}
+
+/* Mise en page pour les mobiles */
+@media (max-width: 992px) {
+    .bento {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(10, 30vh); 
+        grid-template-areas: 
+            "a a"
+            "b b"
+            "c c"
+            "d e"
+            "f f"
+            "j j"
+            "g g"
+            "h h"
+            "i i"
+            "k k";
+    }
+
+    #bento_1 {
+        width: 80vw;
+    }
+
+    #bento_3 {
+        flex-direction: row;
+        padding: 0 12vh;
+        background-size: 5%; 
+    }
+
+    #bento_3 > img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+#bento_1 { 
+    grid-area: a; 
+    background-color: var(--color_r);
+    border: var(--color_w) 8px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Briyone' !important; 
+    font-size: 1.8rem;
+    padding-left: 1vh;
+}
+
+#bento_1 > #main {
+    font-family: 'Briyone' !important; 
+    font-size: 4rem;
+}
+
+#bento_2 { 
+    grid-area: b;
+    background-image: url("./assets/blender_me.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: var(--color_v_1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.3vh;
+}
+
+#bento_2 > img {
+    width: 16px;
+}
+
+#bento_2 > #titles > span {
+    background-color: var(--color_b);
+    padding: 0.4rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-bottom: 2vh;
+    transition: background-color 0.1s ease-out 100ms;
+}
+
+#bento_2 > #titles > span:hover {
+    background-color: var(--color_r);
+}
+
+#bento_2 > #titles > span:nth-child(1):hover {
+    background-color: var(--color_g);
+}
+
+#bento_2 > #titles > span:nth-child(2):hover {
+    background-color: var(--color_y);
+}
+
+#bento_2 > #titles > span:nth-child(4):hover {
+    background-color: var(--color_v_2);
+}
+
+#bento_3 { 
+    grid-area: c;
+    background-image: url("./assets/planet_point.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--color_v_2); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5vh 0;
 }
 
-/* Styles spécifiques pour chaque catégorie */
-.skills { /* Styles spécifiques pour Compétences */ }
-.experience { /* Styles spécifiques pour Expérience */ }
-.education { /* Styles spécifiques pour Éducation */ }
-.interests { /* Styles spécifiques pour Intérêts */ }
-
-@media (max-width: 600px) {
-    .bento-box {
-        grid-template-columns: 1fr;
-    }
+#bento_3 > #text {
+    color: var(--color_v_1);
+    font-family: 'Briyone' !important; 
+    font-size: 1rem;
 }
+
+#bento_3 > #text > p {
+    font-family: 'Briyone' !important; 
+    font-size: 1.5rem;
+}
+
+#bento_3 > img {
+    width: 128px;
+}
+
+#bento_4 { 
+    grid-area: d; 
+    background-image: var(--background_white);
+    background-size: 5vh;
+    border: var(--color_v_2) 8px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color_v_2);
+    font-family: 'Briyone' !important; 
+    font-size: 1rem;
+}
+
+#bento_4 > span {
+    color: var(--color_v_2);
+    font-family: 'Briyone' !important;
+    font-size: 2.5rem; 
+}
+
+
+#bento_5 { 
+    grid-area: e; 
+    background-color: var(--color_g);
+    border: var(--color_w) 8px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color_w);
+    font-family: 'Briyone' !important; 
+    font-size: 1rem;
+}
+
+#bento_5 > span {
+    color: var(--color_w);
+    font-family: 'Briyone' !important;
+    font-size: 2.5rem; 
+}
+
+#bento_6 { 
+    grid-area: f;
+    background: url("./assets/language.svg");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color_v_3);
+    border: var(--color_w) 8px solid; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+    font-family: 'Briyone' !important; 
+    font-size: 1.4rem;
+    color: var(--color_v_1)
+}
+
+#bento_7 { 
+    grid-area: j; 
+    background: url("./assets/sep_b_w.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    background-color: var(--color_g);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bento_7 > span {
+    font-family: 'Briyone' !important; 
+    font-size: 1.4rem;
+    color: var(--color_g);
+    border-radius: 20px;
+    padding: 1vh 3vw;
+    background-color: var(--color_w);
+}
+
+#bento_7 > span > i {
+    color: var(--color_g)
+}
+
+#bento_8 { 
+    grid-area: g; 
+    background-image: url("./assets/wall_data.svg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-color: var(--color_y);
+    border: var(--color_w) 4px solid; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end; 
+    padding: 2.5vh;
+}
+
+#bento_8 > div > span > i {
+    font-size: 4rem;
+}
+
+#bento_8 > div > span {
+    font-family: 'Briyone' !important;
+    margin-bottom: auto;
+}
+
+#b8_title {
+    font-size: 4rem;
+}
+
+#b8_second{
+    font-size: 1.4rem;
+}
+
+#b8_last {
+    font-size: 1.6rem;
+}
+
+#bento_8 > span > i {
+    font-size: 4rem;
+}
+
+#bento_9 { 
+    grid-area: h; 
+    background-image: url("./assets/wall_code.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--color_b);
+    border: var(--color_v_2) 4px solid; 
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content:space-between ;
+    text-align: right;
+    padding: 2.5vh;
+}
+
+#bento_9 > span {
+    border: var(--color_v_3) 2px solid;
+    border-radius: 72px;
+    padding: 0.5vh 1vh;
+    color: var(--color_v_1);
+    font-size: 1.1rem;
+    transition: background-color 0.5s ease-out 100ms;
+}
+
+#bento_9 > div > span {
+    font-family: 'Briyone' !important;
+}
+
+#b9_title {
+    font-size: 4rem;
+}
+
+#b9_second{
+    font-size: 1.4rem;
+}
+
+#b9_last {
+    font-size: 1.6rem;
+}
+
+#bento_9 > span > i {
+    color: var(--color_v_3);
+}
+
+#bento_9 > span:hover {
+    cursor: pointer;
+    background-color: var(--color_v_3);
+    color: white;
+}
+
+#bento_9 > span:hover > i {
+    cursor: pointer;
+    color: white;
+}
+
+#bento_10 { 
+    grid-area: i; 
+    background-image: url("./assets/sep_v3.svg");
+    background-size: 30vw;
+    background-color: var(--color_v_1);
+}
+
+#bento_11 { 
+    grid-area: k; 
+    background-image: url("./assets/skills/ALL.svg");
+    background-size: cover;
+    background-color: var(--color_w);
+    animation: toolbox 200s linear infinite;
+}
+  
+/* ----------------------------------- */
+/* ---         Transit 3           --- */
+/* ----------------------------------- */
+
+.transit3 {
+    top:2vh;
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    background-image: url("./assets/sep_b_v2.svg");
+    background-repeat: repeat-x;
+    background-size: 5.2vh;
+    animation: transit 60s linear infinite;
+    z-index: 100;
+} 
+
+#section_4 {
+    padding-top: 5vh;
+    height: 20vh;
+    background-color: var(--color_v_3);
+}
+
+.list_companies {
+    opacity: 50%;
+    height: 10vh;
+    background-image: url("./assets/list_companies.svg");
+    background-position: bottom center; 
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: companies 60s linear infinite;
+}
+  
+@keyframes companies{
+    from {
+        background-position: 800vh 0;
+      }
+      to {
+        background-position: 0 0;
+      }
+}
+
