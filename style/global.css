@@ -269,7 +269,8 @@ body {
 }
 
 section {
-    scroll-snap-align: center;
+    scroll-snap-align: center y;
+    scroll-behavior: smooth;
 }
 
 .debug {
@@ -413,7 +414,6 @@ a {
     width: 100%;
     background-image: url("./assets/sep_t_w_1.svg");
     background-repeat: repeat-x;
-    background-size: ;
     animation: transit 60s linear infinite;
     z-index: 100;
 }
@@ -450,10 +450,10 @@ a {
 
 @keyframes toolbox {
     0% {
-        background-position: 0 0;
+        background-position: 0 800vw;
     }
     100% {
-        background-position: 0 8000%;
+        background-position: 0 0;
     }
 }
 
@@ -464,6 +464,7 @@ a {
 /* ----------------------------------- */
 
 .transit2 {
+    margin-top: 5px;
     background-color: #2B2D42;
     position: relative;
     width: 100%;
@@ -507,18 +508,17 @@ a {
 @media (max-width: 992px) {
     .bento {
         grid-template-columns: repeat(2, 1fr); 
-        grid-template-rows: repeat(10, 30vh); 
+        grid-template-rows: repeat(9, 40vh); 
         grid-template-areas: 
             "a a"
             "b b"
             "c c"
             "d e"
-            "f f"
-            "j j"
+            "k k"
+            "j f"
             "g g"
             "h h"
-            "i i"
-            "k k";
+            "i i";
     }
 
     #bento_1 {
@@ -814,7 +814,7 @@ a {
     grid-area: k; 
     background-image: url("./assets/skills/ALL.svg");
     background-size: cover;
-    background-color: var(--color_w);
+    background-color: var(--color_b);
     animation: toolbox 200s linear infinite;
 }
   
@@ -823,39 +823,84 @@ a {
 /* ----------------------------------- */
 
 .transit3 {
-    top:2vh;
-    position: relative;
+    height: 2.8vh;
     width: 100%;
-    height: 4vh;
-    background-image: url("./assets/sep_b_v2.svg");
+    background-image: url("./assets/sep_t_v2.svg");
     background-repeat: repeat-x;
-    background-size: 5.2vh;
     animation: transit 60s linear infinite;
     z-index: 100;
-} 
+}
+
+/* ----------------------------------- */
+/* ---         SECTION 4           --- */
+/* ----------------------------------- */
 
 #section_4 {
-    padding-top: 5vh;
-    height: 20vh;
-    background-color: var(--color_v_3);
+    height: 60vh;
+    background-color: var(--color_v_);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.list_companies {
-    opacity: 50%;
-    height: 10vh;
-    background-image: url("./assets/list_companies.svg");
-    background-position: bottom center; 
+#section_4 > img {
+    opacity: 100%;
+    width: 90%;
+    max-height: 100%;
+ }
+ 
+/* ----------------------------------- */
+/* ---         Transit 4           --- */
+/* ----------------------------------- */
+
+.transit4 {
+    margin-bottom: -10px;
+    height: 2.9vh;
+    width: 100%;
+    background-image: url("./assets/sep_b_v3.svg");
     background-repeat: repeat-x;
-    background-size: cover;
-    animation: companies 60s linear infinite;
-}
-  
-@keyframes companies{
-    from {
-        background-position: 800vh 0;
-      }
-      to {
-        background-position: 0 0;
-      }
+    animation: transit 60s linear infinite;
+    z-index: 100;
 }
 
+/* ----------------------------------- */
+/* ---         SECTION 5           --- */
+/* ----------------------------------- */
+
+#section_5 {
+    height: 80vh;
+    background-color: var(--color_v_2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right !important;
+}
+
+#section_5 > .hero > .image {
+    background-image: url("./assets/chat_mange.svg");
+}
+
+/* ----------------------------------- */
+/* ---           FOOTER            --- */
+/* ----------------------------------- */
+
+.transit5 {
+    height: 2.8vh;
+    width: 100%;
+    background-image: url("./assets/sep_t_v3.svg");
+    background-color: var(--color_b);
+    background-repeat: repeat-x;
+    animation: transit 60s linear infinite;
+    z-index: 100;
+}
+
+#section_footer {
+    height: 20vh;
+    background-color: var(--color_b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
