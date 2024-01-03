@@ -696,7 +696,7 @@ a {
 
 #bento_7 > span {
     font-family: 'Briyone' !important; 
-    font-size: 1.4rem;
+    font-size: 2vh;
     color: var(--color_g);
     border-radius: 20px;
     padding: 1vh 3vw;
