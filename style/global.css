@@ -270,7 +270,7 @@ body {
 
 section {
     scroll-snap-align: center y;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 .debug {
@@ -836,7 +836,7 @@ a {
 /* ----------------------------------- */
 
 #section_4 {
-    height: 60vh;
+    height: fit-content;
     background-color: var(--color_v_);
     display: flex;
     flex-direction: column;
@@ -845,9 +845,15 @@ a {
 
 #section_4 > img {
     opacity: 100%;
-    width: 90%;
+    width: 60%;
     max-height: 100%;
  }
+
+ @media (max-width: 992px) {
+    #section_4 > img {
+        width: 100%;
+    }
+}
  
 /* ----------------------------------- */
 /* ---         Transit 4           --- */

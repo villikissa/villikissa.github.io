@@ -66,3 +66,7 @@ function placeWord() {
 // Démarre le processus et le répète toutes les 5 secondes
 setInterval(placeWord, 2000);
 
+function scrollTo(hash) {
+    location.hash = "#" + hash;
+}
+
